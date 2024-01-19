@@ -1,5 +1,7 @@
 // Pull Data from USGS - Using last 30 days - all earthquakes - create a variable
 const USGS = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson";
+const RADIUS_MIN = 5;
+const RADIUS_MULT = 10;
 
 // Perform a GET request to the query URL/
 d3.json(USGS).then(function (data) {
@@ -10,8 +12,10 @@ d3.json(USGS).then(function (data) {
 
   //Create a function for the marker size
   function markerSize(magnitude) {
-    return magnitude *2000;
-  };
+    let calcRadius = magnitude * RADIUS_MULT;
+    let clampRadius = Math.max(calcRadius, RADIUS_MIN)
+    return clampRadius;
+  }
 
   //Set the color scale for the markers
   function choosecolor(depth) {
@@ -47,15 +51,15 @@ d3.json(USGS).then(function (data) {
       pointToLayer: function(feature, latlng) {
 
     //Set the style of the markers based on the properties
-        var markers = {
-          radius: markerSize(feature.properties.mag*10),
+        var style = {
+          radius: markerSize(feature.properties.mag),
             fillColor: choosecolor(feature.geometry.coordinates[2]),
             fillOpacity: 0.1,
             color: "black",
             stroke: true,
             weight: .5
         }
-        return L.circle(latlng,markers);
+        return L.circleMarker(latlng,style);
       }
     });
 
