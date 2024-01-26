@@ -14,17 +14,23 @@ The data markers reflect the magnitude of the earthquake by their size and the d
 Included popups that provided the location, date, magniture and depth of the earthquake when its associated marker is clicked.
 Created a legend to show the color range for the depth of the earthquake.
 
+Link to Earthquake Visualization Website
+- 
+https://raeanng.github.io/leaflet-challenge/
+
 Files Provided
 -
 Index.html - HTML code for website
 Static Folder 
 CSS folder - style.css - formatting for website
 JS folder - logic.js - logic JavaScript for website
+M15_Leaflet_Earthquake_Challenge_Website_Image.pdf - Image of website for reference
+M15_Leaflet_Earthquake_Challenge_Website_Image.pptx - Image of website for reference
 
 # Resources 
 -
 I received help from the following
 
-Tutor - Simon Rennocks
+Tutors - Simon Rennocks and Kourt Bailey
 Instructor - Rufel Estrada 
 TA - Manuel Eduardo Sotelo Cervante
