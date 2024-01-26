@@ -21,7 +21,7 @@ d3.json(USGS).then(function (data) {
       case depth > 50: return "orange"; 
       case depth > 30: return "gold"; 
       case depth > 10: return "yellow"; 
-      default: return "green";                    
+      default: return "palegreen";                    
     }
   }
 
