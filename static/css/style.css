@@ -1,0 +1,15 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#map,
+body,
+html {
+  height: 100%;
+}
+div.legend {
+  background-color: white;
+  padding-left: 1em;
+  padding-right: 1em;
+}
